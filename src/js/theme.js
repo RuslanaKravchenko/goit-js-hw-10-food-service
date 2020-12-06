@@ -8,7 +8,7 @@ const switchRef = document.querySelector('#theme-switch-toggle');
 
 switchRef.addEventListener('change', onChange);
 
-function switchIsCheck() {
+function initialTheme() {
   if (localStorage.getItem('theme') === Theme.DARK) {
     switchRef.checked = true;
     bodyRef.classList.add(Theme.DARK);
@@ -16,7 +16,7 @@ function switchIsCheck() {
     bodyRef.classList.add(Theme.LIGHT);
   }
 }
-switchIsCheck();
+initialTheme();
 
 function onChange() {
   if (bodyRef.classList.contains(Theme.DARK)) {
